@@ -24,10 +24,10 @@ namespace Lab7
                 do
                 {
                     Console.WriteLine("\nГарячі клавіші:\n");
-                    Console.WriteLine("[0] ------ Cписок овочів, впорядкований за ID.\n");
-                    Console.WriteLine("[1] --- А) IComparable список овочів, впорядкований за ціною.");
-                    Console.WriteLine("[2] --- Б) IComparer список овочів впорядкований за ціною і за кількістю ящиків на складі.");
-                    Console.WriteLine("[3] --- В) IEnumerable, список овочів, впорядкований за ціною.");
+                    Console.WriteLine("[0] ------ Cписок овочів, впорядкованих за ID.\n");
+                    Console.WriteLine("[1] --- А) IComparable, список овочів, впорядкованих за ціною.");
+                    Console.WriteLine("[2] --- Б) IComparer, список овочів впорядкованих за ціною і за кількістю ящиків на складі.");
+                    Console.WriteLine("[3] --- В) IEnumerable, список овочів, впорядкованих за ціною.");
                     Console.WriteLine("\n[ESC] --- Вихід\n");
 
                     Console.Write(">");
@@ -39,7 +39,7 @@ namespace Lab7
                             break;
 
                         case '0':
-                            Console.WriteLine("\nCписок овочів, впорядкований ID:");
+                            Console.WriteLine("\nCписок овочів, впорядкованих за ID:");
                             Array.Sort(veg, new Vegetable.SortByID());
                             Vegetable.ShowTable(veg);
                             _ = Console.ReadKey(true);
@@ -47,7 +47,7 @@ namespace Lab7
                             break;
 
                         case '1':
-                            Console.WriteLine("\nIComparable. Cписок овочів, впорядкований за ціною:");
+                            Console.WriteLine("\nIComparable. Cписок овочів, впорядкованих за ціною:");
                             Array.Sort(veg);
                             Vegetable.ShowTable(veg);
                             _ = Console.ReadKey(true);
@@ -55,7 +55,7 @@ namespace Lab7
                             break;
 
                         case '2':
-                            Console.WriteLine("\nIComparer. Cписок овочів, впорядкований за ціною і за кількістю ящиків на складі:");
+                            Console.WriteLine("\nIComparer. Cписок овочів, впорядкованих за ціною і за кількістю ящиків на складі:");
                             Array.Sort(veg, new Vegetable.SortByPriceNumber());
                             Vegetable.ShowTable(veg);
                             _ = Console.ReadKey(true);
@@ -63,7 +63,7 @@ namespace Lab7
                             break;
 
                         case '3':
-                            Console.WriteLine("\nIEnumerable. Cписок овочів, впорядкований за ціною:");
+                            Console.WriteLine("\nIEnumerable. Cписок овочів, впорядкованих за ціною:");
                             Array.Sort(veg, new Vegetable.SortByPrice());
                             Vegetables vegetables = new Vegetables(veg);
                             Vegetable.ShowTable(vegetables.Container);
