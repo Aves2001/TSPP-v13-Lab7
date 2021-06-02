@@ -129,14 +129,11 @@ namespace Lab7
                 return 0;
             }
         }
+        /// <summary>
+        /// Cортування за кількістю ящиків на складі
+        /// </summary>
         public class SortByNumber : IComparer<object>
         {
-            /// <summary>
-            /// Cортування за кількістю ящиків на складі
-            /// </summary>
-            /// <param name="ob1"></param>
-            /// <param name="ob2"></param>
-            /// <returns></returns>
             public int Compare(object ob1, object ob2)
             {
                 Vegetable v1 = (Vegetable)ob1;
@@ -152,9 +149,6 @@ namespace Lab7
             /// <summary>
             /// Cортування за ціною і кількістю ящиків на складі
             /// </summary>
-            /// <param name="ob1"></param>
-            /// <param name="ob2"></param>
-            /// <returns></returns>
             public int Compare(object ob1, object ob2)
             {
                 int x = new SortByPrice().Compare(ob1, ob2);
@@ -171,9 +165,6 @@ namespace Lab7
             /// <summary>
             /// Cортування за ID
             /// </summary>
-            /// <param name="ob1"></param>
-            /// <param name="ob2"></param>
-            /// <returns></returns>
             public int Compare(object ob1, object ob2)
             {
                 Vegetable v1 = (Vegetable)ob1;

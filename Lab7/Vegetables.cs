@@ -45,7 +45,6 @@ namespace Lab7
         /// <summary>
         /// Заповнення масиву Vegetable
         /// </summary>
-        ///
         void FillContainer()
         {
             for (int i = 0; i < size; i++)
